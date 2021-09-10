@@ -21,4 +21,9 @@ NumericVector timesThree(NumericVector y) {
   return y * 3;
 }
 
-
+// [[Rcpp::export]]
+double testSRR(NumericVector theta, int fecundity, int pop){
+  double r;
+  r = (theta[0] * fecundity) / (1 + theta[1] * fecundity * pop);
+  return r;
+}
