@@ -40,3 +40,15 @@ double testIfStatement(int val) {
   }
   return tmp;
 }
+
+// [[Rcpp::export]]
+std::vector<double> testForLoop(int t) {
+ // allocate memory
+ std::vector<double> tmp(t);
+ 
+ for(int i = 0; i <= t; i++){
+  tmp[i] = 3 * t + i;
+ }
+ 
+ return tmp;
+}
