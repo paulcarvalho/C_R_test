@@ -16,4 +16,9 @@ NumericVector timesTwo(NumericVector x) {
   return x * 2;
 }
 
+// [[Rcpp::export]]
+NumericVector timesThree(NumericVector y) {
+  return y * 3;
+}
+
 
